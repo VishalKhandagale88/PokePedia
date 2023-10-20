@@ -1,13 +1,13 @@
-package com.pokepedia.PokePedia;
+package com.pokepedia.PokePediaService;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class PokePediaApplication {
+public class PokePediaServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PokePediaApplication.class, args);
+		SpringApplication.run(PokePediaServiceApplication.class, args);
 	}
 
 }

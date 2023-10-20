@@ -1,10 +1,10 @@
-package com.pokepedia.PokePedia;
+package com.pokepedia.PokePediaService;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class PokePediaApplicationTests {
+class PokePediaServiceApplicationTests {
 
 	@Test
 	void contextLoads() {
