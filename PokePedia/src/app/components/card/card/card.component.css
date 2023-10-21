@@ -35,6 +35,25 @@
 img{
   align-self: center;
 }
+
+/* progress bar css */
+.progress-container {
+  width: 300px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Define the styles for the progress bar */
+.progress-bar {
+  width: 0;
+  height: 10px;
+  text-align: center;
+  line-height: 20px;
+  background-color: #4CAF50; /* Green color */
+  color: white;
+}
+
 .center-button-container {
   display: flex;
   justify-content: center;

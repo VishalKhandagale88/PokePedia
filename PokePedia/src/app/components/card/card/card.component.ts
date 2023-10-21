@@ -12,7 +12,7 @@ import { PokemonListResponse } from 'src/modal/PokemonListResponse';
 export class CardComponent implements OnInit {
 
   constructor(private pokemonService:PokemonService){
-  }
+  }maxValue=500;
 
   pokemons:any[]=[];
   ngOnInit(): void {

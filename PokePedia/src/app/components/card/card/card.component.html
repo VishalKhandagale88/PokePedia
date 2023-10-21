@@ -6,18 +6,17 @@
           <img [src]="pokemons.sprites.back_shiny" alt="pokemons.sprites.">
           <div class="card-pokemon-name">
             <mat-card-title class="pokemon-name">{{pokemons.name}}</mat-card-title>
-            <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+            <mat-card-subtitle>weight : {{pokemons.weight}} </mat-card-subtitle>
           </div>
         </div>
 
       </mat-card-header>
-      <img mat-card-image [src]="pokemons.sprites.other.dream_world.front_default"  width="100px" alt="Photo of a Shiba Inu">
+      <img mat-card-image [src]="pokemons.sprites.other.dream_world.front_default"  width="100px" height="100px" alt="Photo of a Shiba Inu">
       <mat-card-content>
-        <p>
-          The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-          A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-          bred for hunting.
-        </p>
+        <p>Base Experience : {{pokemons.base_experience}}</p>
+        <div class="progress-container">
+          <div class="progress-bar" [ngStyle]="{ width: ( pokemons.base_experience/ maxValue) * 100 + '%' }"></div>
+        </div>
       </mat-card-content>
       <mat-card-actions>
         <button class="read-more-button" mat-raised-button color="warn" routerLink="pokemonInfo">Read more</button>
