@@ -13,13 +13,20 @@
       </mat-card-header>
       <img mat-card-image [src]="pokemons.sprites.other.dream_world.front_default"  width="100px" height="100px" alt="Photo of a Shiba Inu">
       <mat-card-content>
-        <p>Base Experience : {{pokemons.base_experience}}</p>
+        <p ><b>Base Experience : </b>  {{pokemons.base_experience}}</p>
         <div class="progress-container">
           <div class="progress-bar" [ngStyle]="{ width: ( pokemons.base_experience/ maxValue) * 100 + '%' }"></div>
         </div>
+        <div class="stat-container">
+          <p>Stats</p>
+          <div *ngFor="let stat of pokemons.stats ">
+            <p>{{stat.base_stat}} </p>
+          </div>
+        </div>
+
       </mat-card-content>
       <mat-card-actions>
-        <button class="read-more-button" mat-raised-button color="warn" routerLink="pokemonInfo">Read more</button>
+        <button class="read-more-button" mat-raised-button color="warn" routerLink="pokemonInfo/{{pokemons.name}}">Read more</button>
       </mat-card-actions>
     </mat-card>
 </div>
