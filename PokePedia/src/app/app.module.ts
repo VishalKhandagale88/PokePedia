@@ -10,7 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
 import { PokemonInfoComponent } from './components/pokemon-info/pokemon-info.component';
-
+import {MatRippleModule} from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -26,6 +26,7 @@ import { PokemonInfoComponent } from './components/pokemon-info/pokemon-info.com
     MatCardModule,
     MatButtonModule,
     HttpClientModule,
+    MatRippleModule
 
   ],
   providers: [],

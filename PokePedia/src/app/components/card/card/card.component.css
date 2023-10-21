@@ -6,10 +6,9 @@
   margin: 7px;
 }
 .card-container{
-  margin: 5px;
-  display: flex;
-  flex-wrap: wrap; /* Wrap cards to the next row when the container width is exceeded */
-
+ display: flex;
+ flex-wrap: wrap;
+ flex-direction: row;
 }
 
 .example-header-image {
@@ -17,11 +16,16 @@
   background-size: cover;
 }
 
-button{
+.read-more-button{
   width: 50vw;
 }
 img{
   align-self: center;
+}
+.center-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
