@@ -2,13 +2,14 @@
   max-width: 350px;
   background-color: #fff89f;
   padding: 10px;
-  height: 50vh;
+  height: 45vh;
+  margin: 7px;
 }
 .card-container{
   margin: 5px;
-  display: grid;
-  max-width: fit-content;
-  background-color: blueviolet;
+  display: flex;
+  flex-wrap: wrap; /* Wrap cards to the next row when the container width is exceeded */
+
 }
 
 .example-header-image {
@@ -23,8 +24,4 @@ img{
   align-self: center;
 }
 
-div{
-  display: grid;
 
-
-}
