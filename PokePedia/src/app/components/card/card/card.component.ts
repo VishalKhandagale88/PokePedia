@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { PokemonDataService } from 'src/Service/pokemon-data.service';
 import { PokemonService } from 'src/Service/pokemon.service';
-import { PokemonListResponse } from 'src/modal/PokemonListResponse';
+
 
 
 
@@ -11,7 +12,8 @@ import { PokemonListResponse } from 'src/modal/PokemonListResponse';
 })
 export class CardComponent implements OnInit {
 
-  constructor(private pokemonService:PokemonService){
+  constructor(private pokemonService:PokemonService,
+    private pokemonDataService: PokemonDataService){
   }maxValue=500;
 
   pokemons:any[]=[];
@@ -24,6 +26,7 @@ export class CardComponent implements OnInit {
 
         })
       })
+      this.pokemonDataService.setPokemons(this.pokemons);
     })
   }
 
