@@ -9,12 +9,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {MatButtonModule} from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
+import { PokemonInfoComponent } from './components/pokemon-info/pokemon-info.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     CardComponent,
+    PokemonInfoComponent,
 
   ],
   imports: [
