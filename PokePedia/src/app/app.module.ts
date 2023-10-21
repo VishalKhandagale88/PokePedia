@@ -8,6 +8,7 @@ import { CardComponent } from './components/card/card/card.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {MatButtonModule} from '@angular/material/button';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import {MatButtonModule} from '@angular/material/button';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

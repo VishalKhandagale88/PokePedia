@@ -1,0 +1,7 @@
+{
+  "/api": {
+    "target": "https://pokeapi.co/api/v2/",
+    "secure": true,
+    "changeOrigin": true
+  }
+}
