@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
-
+import { HttpClient } from "@angular/common/http";
 @Injectable({
   providedIn: 'root'
 })
 export class PokemonService {
 
-  constructor() { }
+  constructor(private httpClent : HttpClient ) { }
+
 }
