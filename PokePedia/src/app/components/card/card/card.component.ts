@@ -22,8 +22,6 @@ export class CardComponent implements OnInit {
       response.results.forEach((result: any)=>{
         this.pokemonService.getDetails(result.name).subscribe((pokemonResponse:any)=>{
           this.pokemons.push(pokemonResponse);
-           console.log(this.pokemons);
-
         })
       })
       this.pokemonDataService.setPokemons(this.pokemons);
