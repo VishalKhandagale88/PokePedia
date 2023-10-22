@@ -25,4 +25,7 @@ export class PokemonService {
     return this.httpClent.get(`${this.baseUrl}/ability/${id}`)
   }
 
+  getMovesOfPokemon(id:number){
+    return this.httpClent.get(`${this.baseUrl}/move/${id}`)
+  }
 }

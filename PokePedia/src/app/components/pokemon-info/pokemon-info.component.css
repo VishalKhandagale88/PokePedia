@@ -45,3 +45,32 @@
 .pokemon-similar-ability-loop{
   margin-left: 25px;
 }
+.progress-container {
+  width: 700px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+/* Define the styles for the progress bar */
+.progress-bar {
+  width: 0;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  background-color: #af4c54; /* Green color */
+  color: white;
+}
+.progress-bar-div{
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.accuracy-heading{
+  font-size: 40px;
+  margin-right: 25px;
+  text-align: center;
+
+}

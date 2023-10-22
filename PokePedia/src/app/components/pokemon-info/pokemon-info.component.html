@@ -32,7 +32,35 @@
           </div>
         </div>
     </mat-tab>
-    <mat-tab label="Moves"> Content 2 </mat-tab>
+    <mat-tab label="Moves">
+      <div class="progress-bar-div">
+        <h2 class="accuracy-heading">Accuracy</h2>
+        <div class="progress-container">
+          <div class="progress-bar" [ngStyle]="{ width: ( pokemonMoves?.accuracy/ maxValue) * 100 + '%' }">{{pokemonMoves?.accuracy}}</div>
+        </div>
+      </div>
+      <div class="progress-bar-div">
+        <h2 class="accuracy-heading">Power</h2>
+        <div class="progress-container">
+          <div class="progress-bar" [ngStyle]="{ width: ( pokemonMoves?.power/ maxValue) * 100 + '%' }">{{pokemonMoves?.power}}</div>
+        </div>
+      </div>
+
+      <h2 class="effect-entries-heading">Effect Entries</h2>
+      <div class="effects" *ngFor="let eff of pokemonMoves?.effect_entries ">
+        <span>Effect : </span><p>{{eff.effect}} </p>
+       <span>Short effect : </span> <p>{{eff.short_effect}} </p>
+      </div>
+
+      <h2 class="effect-entries-heading">Learned by pokemon</h2>
+      <div class="grid-div">
+        <div class="flavour-text-for-loop-div" *ngFor="let eff of pokemonMoves?.learned_by_pokemon ">
+          <p>{{eff.name}} </p>
+        </div>
+      </div>
+
+
+    </mat-tab>
     <mat-tab label="Species"> Content 3 </mat-tab>
     <mat-tab label="Charecteristics"> Content 4 </mat-tab>
   </mat-tab-group>

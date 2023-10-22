@@ -17,6 +17,16 @@ export class PokemonInfoComponent implements OnInit{
   pokemonAbility:any;
   pokemonId:number=0;
 
+
+  // ability data
+  pokemonMoves:any;
+
+  // accuracy max value
+  maxValue:number = 200;
+
+  // max power
+  maxPower = 200;
+
   constructor(private pokemonDataService: PokemonDataService,
     private pokemonService:PokemonService,
     private route:ActivatedRoute){
@@ -41,9 +51,17 @@ export class PokemonInfoComponent implements OnInit{
   getAbility(id:number){
     this.pokemonService.getPokemonAbilities(id).subscribe((data):any=>{
       this.pokemonAbility=data;
-      console.log(this.pokemonAbility);
+      // console.log(this.pokemonAbility);
+      this.getMoves(id);
     })
 
+  }
+
+  getMoves(id:number){
+    this.pokemonService.getMovesOfPokemon(id).subscribe((data)=>{
+      this.pokemonMoves = data;
+      console.log(this.pokemonMoves);
+    })
   }
 
 
