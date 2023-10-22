@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { PokemonDataService } from 'src/Service/pokemon-data.service';
+import { PokemonService } from 'src/Service/pokemon.service';
 
 @Component({
   selector: 'app-pokemon-info',
@@ -13,13 +14,17 @@ export class PokemonInfoComponent implements OnInit{
   pokemonName:string | null | undefined;
   pokemon:any;
 
+  pokemonAbility:any;
+  pokemonId:number=0;
 
   constructor(private pokemonDataService: PokemonDataService,
+    private pokemonService:PokemonService,
     private route:ActivatedRoute){
     }
 
   ngOnInit(): void {
     this.getData();
+
   }
 
   getData(){
@@ -27,10 +32,19 @@ export class PokemonInfoComponent implements OnInit{
     this.route.params.subscribe(params=>{
       this.pokemonName=params['name'];
       this.pokemon = this.pokemonDataService.getPokemons().find((p) => p.name === this.pokemonName);
-      console.log(this.pokemon);
+      this.pokemonId = this.pokemon.id;
+      this.getAbility(this.pokemonId);
     })
+
   }
 
+  getAbility(id:number){
+    this.pokemonService.getPokemonAbilities(id).subscribe((data):any=>{
+      this.pokemonAbility=data;
+      console.log(this.pokemonAbility);
+    })
+
+  }
 
 
 }

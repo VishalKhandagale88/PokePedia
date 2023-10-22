@@ -1,10 +1,40 @@
-<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <!-- <img [src]="pokemon" class="d-block w-100" alt="..."> -->
-      <p>{{pokemon.name}} </p>
-      <p>{{pokemon.height}} </p>
-      <img mat-card-image [src]="pokemon.sprites.other.dream_world.front_default"  width="100px" height="100px" alt="Photo of a Shiba Inu">
-    </div>
+<h1 class="pokemon-name-heading">{{pokemon.name}}</h1>
+<div class="image-div">
+  <div class="img-div">
+    <img [src]="pokemon.sprites.other.dream_world.front_default"  height="500px" width="500px" alt="">
   </div>
+</div>
+<div class="tap-panel">
+  <mat-tab-group>
+    <mat-tab label="Abilities">
+      <div  class="ability-name">
+        <span>Ability name : </span>
+        <p class="effect-name-heading">{{ pokemonAbility?.name }}</p>
+      </div>
+      <h2 class="effect-entries-heading">Effect Entries</h2>
+      <div class="effects" *ngFor="let eff of pokemonAbility?.effect_entries ">
+        <p>{{eff.effect}} </p>
+      </div>
+      <div class="flavour-text-entries">
+        <h2 class="effect-entries-heading">Flavour text Entries</h2>
+        <div class="grid-div">
+          <div *ngFor="let e of pokemonAbility?.flavor_text_entries" class="flavour-text-for-loop-div">
+            <p>{{e.flavor_text}} </p>
+          </div>
+        </div>
+      </div>
+        <div class="pokemon-similar-ability">
+          <h2 class="effect-entries-heading">Pokemons having similar ability</h2>
+          <div class="pokemons-list">
+            <div *ngFor=" let p of pokemonAbility?.pokemon" class="pokemon-similar-ability-loop" >
+              <p>{{p.pokemon.name}} </p>
+            </div>
+          </div>
+        </div>
+    </mat-tab>
+    <mat-tab label="Moves"> Content 2 </mat-tab>
+    <mat-tab label="Species"> Content 3 </mat-tab>
+    <mat-tab label="Charecteristics"> Content 4 </mat-tab>
+  </mat-tab-group>
+
 </div>

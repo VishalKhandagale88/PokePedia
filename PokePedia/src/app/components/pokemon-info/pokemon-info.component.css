@@ -1,0 +1,47 @@
+.pokemon-name-heading{
+  font-size: 90px;
+  text-align: center;
+  margin-top: 30px;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+}
+.image-div{
+  background-color: antiquewhite;
+  border-radius: 20px;
+
+}
+.img-div{
+  background-color: red;
+  width: fit-content;
+  border-radius: 50%;
+}
+.ability-name{
+  text-align: center;
+}
+.effect-name-heading{
+  margin-top: 10px;
+  font-size: 50px;
+  font-weight: bold;
+}
+.effects{
+  margin: 0 25px 25px 25px;
+  border-bottom: 1px solid yellow;
+}
+.effect-entries-heading{
+  margin-left: 25px;
+  font-weight: bold;
+  color: goldenrod;
+}
+.flavour-text-for-loop-div{
+  margin-left: 30px;
+
+}
+.grid-div{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid yellow;
+  margin-bottom: 25px;
+}
+.pokemon-similar-ability-loop{
+  margin-left: 25px;
+}

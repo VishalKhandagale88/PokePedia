@@ -21,4 +21,8 @@ export class PokemonService {
     return this.httpClent.get(`${this.baseUrl}/pokemon/${name}`)
   }
 
+  getPokemonAbilities(id:number){
+    return this.httpClent.get(`${this.baseUrl}/ability/${id}`)
+  }
+
 }
