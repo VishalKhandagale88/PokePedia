@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
-import { Observable } from 'rxjs';
+import { Observable, of } from 'rxjs';
 import { PokemonListResponse } from 'src/modal/PokemonListResponse';
 import { identifierName } from '@angular/compiler';
 
@@ -13,8 +13,8 @@ export class PokemonService {
   baseUrl:string = "https://pokeapi.co/api/v2";
 
   // fetching all the pokemons from the api
-  getAllPokemonsData(){
-    return this.httpClent.get(`${this.baseUrl}/pokemon?limit=20&offset=0`);
+  getAllPokemonsData(limit:number,offset:number){
+    return this.httpClent.get(`${this.baseUrl}/pokemon?limit=${limit}&offset=${offset}`);
   }
 
   getDetails(name:string){

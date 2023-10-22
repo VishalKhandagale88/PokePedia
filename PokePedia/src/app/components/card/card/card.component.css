@@ -65,9 +65,11 @@ img{
   justify-content: center;
   align-items: center;
 }
-
-.load-more-button{
-  color: #2bea32;
-  background-color: #2bea32;
+pagination-controls{
+  text-align: center;
+  color: white;
+}
+pagination-controls:hover{
+  color: black;
 }
 

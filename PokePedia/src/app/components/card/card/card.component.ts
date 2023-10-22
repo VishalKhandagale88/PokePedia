@@ -15,11 +15,19 @@ export class CardComponent implements OnInit {
   constructor(private pokemonService:PokemonService,
     private pokemonDataService: PokemonDataService){
   }maxValue=500;
+  page=1;
+  totalPokemons:number=100;
 
   pokemons:any[]=[];
   ngOnInit(): void {
-    this.pokemonService.getAllPokemonsData().subscribe((response:any)=>{
+    this.getPokemons();
+  }
+  // get all pokemons method
+  getPokemons(){
+    this.pokemonService.getAllPokemonsData(10,this.page+0).subscribe((response:any)=>{
       response.results.forEach((result: any)=>{
+        this.totalPokemons = response.count;
+
         this.pokemonService.getDetails(result.name).subscribe((pokemonResponse:any)=>{
           this.pokemons.push(pokemonResponse);
         })
@@ -27,5 +35,4 @@ export class CardComponent implements OnInit {
       this.pokemonDataService.setPokemons(this.pokemons);
     })
   }
-
 }

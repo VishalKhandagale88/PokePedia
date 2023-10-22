@@ -11,6 +11,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
 import { PokemonInfoComponent } from './components/pokemon-info/pokemon-info.component';
 import {MatTabsModule} from '@angular/material/tabs';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {MatTabsModule} from '@angular/material/tabs';
     MatCardModule,
     MatButtonModule,
     HttpClientModule,
-    MatTabsModule
+    MatTabsModule,
+    NgxPaginationModule
 
   ],
   providers: [],
