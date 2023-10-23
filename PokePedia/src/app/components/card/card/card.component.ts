@@ -24,7 +24,7 @@ export class CardComponent implements OnInit {
   }
   // get all pokemons method
   getPokemons(){
-    this.pokemonService.getAllPokemonsData(10,this.page+0).subscribe((response:any)=>{
+    this.pokemonService.getAllPokemonsData(12,this.page+0).subscribe((response:any)=>{
       response.results.forEach((result: any)=>{
         this.totalPokemons = response.count;
 
