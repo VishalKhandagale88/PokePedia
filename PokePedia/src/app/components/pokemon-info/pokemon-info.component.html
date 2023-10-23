@@ -1,6 +1,6 @@
-<h1 class="pokemon-name-heading">{{pokemon.name}}</h1>
-<div class="image-div">
-  <div class="img-div">
+<h1 class="pokemon-name-heading" [ngStyle]="{color:pokemonSpecies?.color.name}" >{{pokemon.name}}</h1>
+<div class="image-div" >
+  <div class="img-div" [ngStyle]="{backgroundColor:pokemonSpecies?.color.name}">
     <img [src]="pokemon.sprites.other.dream_world.front_default"  height="500px" width="500px" alt="">
   </div>
 </div>
@@ -61,7 +61,14 @@
 
 
     </mat-tab>
-    <mat-tab label="Species"> Content 3 </mat-tab>
+    <mat-tab label="Species">
+      <div class="progress-bar-div">
+        <h2 class="accuracy-heading">Base Happiness</h2>
+        <div class="progress-container">
+          <div class="progress-bar" [ngStyle]="{ width: ( pokemonSpecies?.base_happiness/ maxBaseHappiness) * 100 + '%' }">{{pokemonSpecies?.base_happiness}}</div>
+        </div>
+      </div>
+    </mat-tab>
     <mat-tab label="Charecteristics"> Content 4 </mat-tab>
   </mat-tab-group>
 

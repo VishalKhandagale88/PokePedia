@@ -30,6 +30,8 @@ export class PokemonInfoComponent implements OnInit{
   //pokemon species
   pokemonSpecies:any;
 
+  maxBaseHappiness=100;
+
   constructor(private pokemonDataService: PokemonDataService,
     private pokemonService:PokemonService,
     private route:ActivatedRoute){
