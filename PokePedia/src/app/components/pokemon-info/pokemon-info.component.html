@@ -1,4 +1,4 @@
-<h1 class="pokemon-name-heading" [ngStyle]="{color:pokemonSpecies?.color.name}" >{{pokemon.name}}</h1>
+<h1 class="pokemon-name-heading" [ngStyle]="{color:pokemonColor}" >{{pokemon.name}}</h1>
 <div class="image-div" >
   <div class="img-div" [ngStyle]="{backgroundColor:pokemonSpecies?.color.name}">
     <img [src]="pokemon.sprites.other.dream_world.front_default"  height="500px" width="500px" alt="">
@@ -36,13 +36,13 @@
       <div class="progress-bar-div">
         <h2 class="accuracy-heading">Accuracy</h2>
         <div class="progress-container">
-          <div class="progress-bar" [ngStyle]="{ width: ( pokemonMoves?.accuracy/ maxValue) * 100 + '%' }">{{pokemonMoves?.accuracy}}</div>
+          <div class="progress-bar" [ngStyle]="{ width: ( pokemonMoves?.accuracy/ maxValue) * 100 + '%' ,backgroundColor:pokemonColor}">{{pokemonMoves?.accuracy}}</div>
         </div>
       </div>
       <div class="progress-bar-div">
         <h2 class="accuracy-heading">Power</h2>
         <div class="progress-container">
-          <div class="progress-bar" [ngStyle]="{ width: ( pokemonMoves?.power/ maxValue) * 100 + '%' }">{{pokemonMoves?.power}}</div>
+          <div class="progress-bar" [ngStyle]="{ width: ( pokemonMoves?.power/ maxValue) * 100 + '%' ,backgroundColor:pokemonColor}">{{pokemonMoves?.power}}</div>
         </div>
       </div>
 
@@ -65,7 +65,13 @@
       <div class="progress-bar-div">
         <h2 class="accuracy-heading">Base Happiness</h2>
         <div class="progress-container">
-          <div class="progress-bar" [ngStyle]="{ width: ( pokemonSpecies?.base_happiness/ maxBaseHappiness) * 100 + '%' }">{{pokemonSpecies?.base_happiness}}</div>
+          <div class="progress-bar" [ngStyle]="{ width: ( pokemonSpecies?.base_happiness/ maxBaseHappiness) * 100 + '%' ,backgroundColor:pokemonColor}">{{pokemonSpecies?.base_happiness}}</div>
+        </div>
+      </div>
+      <div class="progress-bar-div">
+        <h2 class="accuracy-heading">Capture Rate</h2>
+        <div class="progress-container">
+          <div class="progress-bar" [ngStyle]="{ width: ( pokemonSpecies?.capture_rate/ maxBaseHappiness) * 100 + '%',backgroundColor:pokemonColor}">{{pokemonSpecies?.capture_rate}}</div>
         </div>
       </div>
     </mat-tab>

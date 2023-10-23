@@ -32,10 +32,13 @@ export class PokemonInfoComponent implements OnInit{
 
   maxBaseHappiness=100;
 
+  pokemonColor:string|null|undefined;
+
   constructor(private pokemonDataService: PokemonDataService,
     private pokemonService:PokemonService,
     private route:ActivatedRoute){
     }
+
 
   ngOnInit(): void {
     this.getData();
@@ -73,6 +76,7 @@ export class PokemonInfoComponent implements OnInit{
     this.pokemonService.getPokemonSpecies(id).subscribe(data=>{
       this.pokemonSpecies = data
       console.log(this.pokemonSpecies);
+      this.pokemonColor=this.pokemonSpecies.color.name
     })
   }
 

@@ -60,7 +60,8 @@
   text-align: center;
   line-height: 30px;
   background-color: #af4c54; /* Green color */
-  color: white;
+  color: gold;
+  font-size: larger;
 }
 .progress-bar-div{
   margin-top: 25px;
