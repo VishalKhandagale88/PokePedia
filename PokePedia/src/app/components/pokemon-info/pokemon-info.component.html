@@ -1,4 +1,4 @@
-<h1 class="pokemon-name-heading" [ngStyle]="{color:pokemonColor}" >{{pokemon.name}}</h1>
+<h1 class="pokemon-name-heading" [ngStyle]="{color:pokemonColor}" > <span class="bordered-text"> {{pokemon.name}}</span></h1>
 <div class="image-div" >
   <div class="img-div" [ngStyle]="{backgroundColor:pokemonSpecies?.color.name}">
     <img [src]="pokemon.sprites.other.dream_world.front_default"  height="500px" width="500px" alt="">
@@ -62,16 +62,46 @@
 
     </mat-tab>
     <mat-tab label="Species">
-      <div class="progress-bar-div">
-        <h2 class="accuracy-heading">Base Happiness</h2>
-        <div class="progress-container">
-          <div class="progress-bar" [ngStyle]="{ width: ( pokemonSpecies?.base_happiness/ maxBaseHappiness) * 100 + '%' ,backgroundColor:pokemonColor}">{{pokemonSpecies?.base_happiness}}</div>
+      <div class="species-scale">
+        <div class="progress-bar-div">
+          <h2 class="accuracy-heading">Base Happiness</h2>
+          <div class="progress-container">
+            <div class="progress-bar" [ngStyle]="{ width: ( pokemonSpecies?.base_happiness/ maxBaseHappiness) * 100 + '%' ,backgroundColor:pokemonColor}">{{pokemonSpecies?.base_happiness}}</div>
+          </div>
+        </div>
+        <div class="progress-bar-div">
+          <h2 class="accuracy-heading">Capture Rate</h2>
+          <div class="progress-container">
+            <div class="progress-bar" [ngStyle]="{ width: ( pokemonSpecies?.capture_rate/ maxcaptureRate) * 100 + '%',backgroundColor:pokemonColor}">{{pokemonSpecies?.capture_rate}}</div>
+          </div>
+        </div>
+        <div class="progress-bar-div">
+          <h2 class="accuracy-heading">hatch couter</h2>
+          <div class="progress-container">
+            <div class="progress-bar" [ngStyle]="{ width: ( pokemonSpecies?.hatch_counter/ maxHatchCounter) * 100 + '%',backgroundColor:pokemonColor}">{{pokemonSpecies?.hatch_counter}}</div>
+          </div>
         </div>
       </div>
-      <div class="progress-bar-div">
-        <h2 class="accuracy-heading">Capture Rate</h2>
-        <div class="progress-container">
-          <div class="progress-bar" [ngStyle]="{ width: ( pokemonSpecies?.capture_rate/ maxBaseHappiness) * 100 + '%',backgroundColor:pokemonColor}">{{pokemonSpecies?.capture_rate}}</div>
+      <div class="eggGroup-habitate-grwothRate">
+        <div class="eggGroup">
+          <div>
+            <h1>Egg Groudp</h1>
+              <div *ngFor="let group of pokemonSpecies?.egg_groups" class="eggGroup-habitate-grwothRate-loops">
+                <p>{{group.name}} </p>
+              </div>
+          </div>
+        </div>
+        <div class="growthRate">
+          <div>
+            <h1>Growth Rate</h1>
+            <p>{{pokemonSpecies?.growth_rate.name}}</p>
+          </div>
+        </div>
+        <div class="habitate">
+          <div>
+            <h1>Habitate</h1>
+            <p>{{pokemonSpecies?.habitat.name}}</p>
+          </div>
         </div>
       </div>
     </mat-tab>

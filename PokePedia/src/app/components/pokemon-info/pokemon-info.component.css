@@ -1,10 +1,17 @@
 .pokemon-name-heading{
-  font-size: 90px;
-  text-align: center;
   margin-top: 30px;
+  text-align: center;
   text-transform: capitalize;
-  margin-bottom: 30px;
-  font-weight: bold;
+}
+.bordered-text{
+  font-size: 24px; /* Set the font size as needed */
+    display: inline-block; /* To apply styles to inline elements */
+    font-size: 90px;
+  text-align: center;
+  text-transform: capitalize;
+  display: inline;
+  text-shadow: 0 0 10px #171a17, 0 0 20px #161a16, 0 0 30px #1c221c;
+
 }
 .image-div{
   background-color: antiquewhite;
@@ -74,4 +81,17 @@
   margin-right: 25px;
   text-align: center;
 
+}
+.species-scale{
+  border-bottom: 1px solid gold;
+}
+
+.eggGroup-habitate-grwothRate{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin:0px 50px 30px 50px;
+  border-bottom: 1px solid gold;
+}
+.eggGroup-habitate-grwothRate-loops{
+  margin-left: 40px;
 }

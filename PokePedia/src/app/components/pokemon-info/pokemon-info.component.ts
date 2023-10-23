@@ -32,6 +32,11 @@ export class PokemonInfoComponent implements OnInit{
 
   maxBaseHappiness=100;
 
+  maxcaptureRate=300;
+
+  maxHatchCounter = 300;
+
+  
   pokemonColor:string|null|undefined;
 
   constructor(private pokemonDataService: PokemonDataService,
