@@ -21,6 +21,10 @@ pokemon moves
 ![Alt Text](https://github.com/VishalKhandagale88/PokePedia/blob/main/PokePedia/pokemon-moves.png)
 
 
+pokemon Species
+![Alt Text](https://github.com/VishalKhandagale88/PokePedia/blob/main/PokePedia/species.png)
+
+
 pokemon Charecteristics
 ![Alt Text](https://github.com/VishalKhandagale88/PokePedia/blob/main/PokePedia/characterisitcs.png)
 
