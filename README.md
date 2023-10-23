@@ -18,7 +18,7 @@ pokemon abilities tab
 
 
 pokemon moves
-![Alt Text](https://github.com/VishalKhandagale88/PokePedia/blob/main/PokePedia/Screenshot%202023-10-22%20072248.png)
+![Alt Text](https://github.com/VishalKhandagale88/PokePedia/blob/main/PokePedia/pokemon-moves.png)
 
 
 # PokePedia
