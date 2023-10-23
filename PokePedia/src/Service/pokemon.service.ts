@@ -40,4 +40,8 @@ export class PokemonService {
   getBerriesData(id:number){
     return this.httpClent.get(`${this.baseUrl}/berry/${id}`)
   }
+
+  getPokemonEvolution(id:number){
+    return this.httpClent.get(`${this.baseUrl}/evolution-chain/${id}`)
+  }
 }

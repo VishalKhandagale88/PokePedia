@@ -49,6 +49,8 @@ export class PokemonInfoComponent implements OnInit{
 
   maxSoilDryness=100;
 
+  pokemonEvolution:any;
+
   constructor(private pokemonDataService: PokemonDataService,
     private pokemonService:PokemonService,
     private route:ActivatedRoute){
