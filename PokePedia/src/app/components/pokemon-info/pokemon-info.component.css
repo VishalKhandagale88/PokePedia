@@ -26,7 +26,7 @@
   border-radius: 50%;
 }
 .card{
-  margin-top: 5px;
+  margin: 70px 20px 0 10px;
   background-color: rgba(245, 245, 245, 0.464);
 }
 
@@ -34,7 +34,10 @@
   display: flex;
   column-gap: 8px;
 }
-
+.berry-data{
+  display: flex;
+  column-gap: 8px;
+}
 .ability-name{
   text-align: center;
 }
@@ -117,4 +120,30 @@
 .character{
   margin: 10px 0 0 40% ;
   text-align: center;
+}
+
+.berry-card-progress-heading{
+  text-align: center;
+  font-weight: bold;
+
+}
+.berry-progress-container {
+  width: 280px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+.berry-progress-bar {
+  width: 0;
+  height: 15px;
+  text-align: center;
+  line-height: 15px;
+  background-color: #af4c54; /* Green color */
+  color: gold;
+  font-size: small;
+
+}
+.card-bar-div{
+  padding: 2px;
 }

@@ -43,6 +43,12 @@ export class PokemonInfoComponent implements OnInit{
 
   berries:any;
 
+  maxGrowthTime=20;
+
+  maxNaturalGiftPower=200;
+
+  maxSoilDryness=100;
+
   constructor(private pokemonDataService: PokemonDataService,
     private pokemonService:PokemonService,
     private route:ActivatedRoute){

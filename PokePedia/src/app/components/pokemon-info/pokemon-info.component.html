@@ -12,11 +12,35 @@
             <div class="flavour-loop-div">
               <p>Flavors : </p>
               <div class="flavors-loop" *ngFor="let fl of berries?.flavors">
-                <p class="card-text">{{fl.flavor.name}}</p>
+                <p class="card-text">{{fl.flavor.name}}  </p>
               </div>
-
             </div>
-
+            <div class="berry-data">
+              <p>Firm-ness : </p>
+              <p>{{berries?.firmness.name}}</p>
+            </div>
+            <div class="berry-data">
+              <p>Item : </p>
+              <p>{{berries?.item.name}} </p>
+            </div>
+            <div class="berry-data">
+              <p>Natural Gift : </p>
+              <p>{{berries?.natural_gift_type.name}}</p>
+            </div>
+          </div>
+          <div class="berry-progess-bars">
+            <div class="card-bar-div">
+                <p class="berry-card-progress-heading">Growth Time</p>
+              <div class="berry-progress-container">
+                <div class="berry-progress-bar" [ngStyle]="{ width: ( berries?.growth_time/ maxGrowthTime) * 100 + '%' ,backgroundColor:pokemonColor}">{{pokemonMoves?.power}}</div>
+              </div>
+            </div>
+            <div class="card-bar-div">
+              <p class="berry-card-progress-heading">Natural Gift Power</p>
+              <div class="berry-progress-container">
+              <div class="berry-progress-bar" [ngStyle]="{ width: ( berries?.natural_gift_power/ maxNaturalGiftPower) * 100 + '%' ,backgroundColor:pokemonColor}">{{berries?.natural_gift_power}}</div>
+            </div>
+          </div>
           </div>
         </div>
     </div>
