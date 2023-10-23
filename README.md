@@ -21,6 +21,9 @@ pokemon moves
 ![Alt Text](https://github.com/VishalKhandagale88/PokePedia/blob/main/PokePedia/pokemon-moves.png)
 
 
+pokemon Charecteristics
+![Alt Text](https://github.com/VishalKhandagale88/PokePedia/blob/main/PokePedia/characterisitcs.png)
+
 # PokePedia
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.7.
