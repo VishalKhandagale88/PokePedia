@@ -95,3 +95,13 @@
 .eggGroup-habitate-grwothRate-loops{
   margin-left: 40px;
 }
+.pokemonCharacteristic-loop{
+  display: flex;
+  column-gap: 10px;
+  align-items: center;
+  justify-content: baseline;
+}
+.character{
+  margin: 10px 0 0 40% ;
+  text-align: center;
+}

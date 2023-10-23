@@ -32,4 +32,8 @@ export class PokemonService {
   getPokemonSpecies(id:number){
     return this.httpClent.get(`${this.baseUrl}/pokemon-species/${id}`)
   }
+
+  getPokemonCharacteristic(id:number){
+    return this.httpClent.get(`${this.baseUrl}/characteristic/${id}`)
+  }
 }

@@ -36,7 +36,9 @@ export class PokemonInfoComponent implements OnInit{
 
   maxHatchCounter = 300;
 
-  
+  pokemonCharacteristic:any;
+
+
   pokemonColor:string|null|undefined;
 
   constructor(private pokemonDataService: PokemonDataService,
@@ -80,10 +82,18 @@ export class PokemonInfoComponent implements OnInit{
   getSpecies(id:number){
     this.pokemonService.getPokemonSpecies(id).subscribe(data=>{
       this.pokemonSpecies = data
-      console.log(this.pokemonSpecies);
+      // console.log(this.pokemonSpecies);
       this.pokemonColor=this.pokemonSpecies.color.name
+      this.getChacteristics(id);
     })
   }
 
+  getChacteristics(id:number){
+    this.pokemonService.getPokemonCharacteristic(id).subscribe(data=>{
+      this.pokemonCharacteristic =  data;
+      console.log("pokemon chracteristics data");
+      console.log(this.pokemonCharacteristic);
+    })
+  }
 
 }

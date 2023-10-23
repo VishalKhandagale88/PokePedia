@@ -105,7 +105,26 @@
         </div>
       </div>
     </mat-tab>
-    <mat-tab label="Charecteristics"> Content 4 </mat-tab>
+    <mat-tab label="Charecteristics">
+      <div class="Charecteristics">
+        <div class="character">
+          <div class="pokemonCharacteristic-loop">
+            <h1>Possible values</h1>
+            <div *ngFor="let group of pokemonCharacteristic?.possible_values" >
+              <p>{{group}} </p>
+            </div>
+          </div>
+          <div>
+            <div class="pokemonCharacteristic-loop">
+              <p>Highest Stat : </p>
+            <p>{{pokemonCharacteristic?.highest_stat.name}}</p>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </mat-tab>
   </mat-tab-group>
 
 </div>
