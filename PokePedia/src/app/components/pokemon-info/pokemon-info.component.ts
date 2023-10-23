@@ -41,6 +41,8 @@ export class PokemonInfoComponent implements OnInit{
 
   pokemonColor:string|null|undefined;
 
+  berries:any;
+
   constructor(private pokemonDataService: PokemonDataService,
     private pokemonService:PokemonService,
     private route:ActivatedRoute){
@@ -49,7 +51,7 @@ export class PokemonInfoComponent implements OnInit{
 
   ngOnInit(): void {
     this.getData();
-
+    this.getBerries(this.pokemonId);
   }
 
   getData(){
@@ -91,8 +93,13 @@ export class PokemonInfoComponent implements OnInit{
   getChacteristics(id:number){
     this.pokemonService.getPokemonCharacteristic(id).subscribe(data=>{
       this.pokemonCharacteristic =  data;
-      console.log("pokemon chracteristics data");
-      console.log(this.pokemonCharacteristic);
+    })
+  }
+
+  getBerries(id:number){
+    this.pokemonService.getBerriesData(id).subscribe(data=>{
+      this.berries =  data;
+      console.log(this.berries);
     })
   }
 

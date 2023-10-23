@@ -3,6 +3,24 @@
   <div class="img-div" [ngStyle]="{backgroundColor:pokemonSpecies?.color.name}">
     <img [src]="pokemon.sprites.other.dream_world.front_default"  height="500px" width="500px" alt="">
   </div>
+  <div class="more-info">
+    <div>
+        <div class="card" style="width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">Berries</h5>
+            <h6 class="card-subtitle text-muted">{{berries?.name}}</h6>
+            <div class="flavour-loop-div">
+              <p>Flavors : </p>
+              <div class="flavors-loop" *ngFor="let fl of berries?.flavors">
+                <p class="card-text">{{fl.flavor.name}}</p>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+    </div>
+  </div>
 </div>
 <div class="tap-panel">
   <mat-tab-group>
