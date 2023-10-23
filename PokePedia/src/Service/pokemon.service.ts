@@ -28,4 +28,8 @@ export class PokemonService {
   getMovesOfPokemon(id:number){
     return this.httpClent.get(`${this.baseUrl}/move/${id}`)
   }
+
+  getPokemonSpecies(id:number){
+    return this.httpClent.get(`${this.baseUrl}/pokemon-species/${id}`)
+  }
 }

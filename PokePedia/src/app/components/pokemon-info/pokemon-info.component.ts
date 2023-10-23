@@ -27,6 +27,9 @@ export class PokemonInfoComponent implements OnInit{
   // max power
   maxPower = 200;
 
+  //pokemon species
+  pokemonSpecies:any;
+
   constructor(private pokemonDataService: PokemonDataService,
     private pokemonService:PokemonService,
     private route:ActivatedRoute){
@@ -60,7 +63,14 @@ export class PokemonInfoComponent implements OnInit{
   getMoves(id:number){
     this.pokemonService.getMovesOfPokemon(id).subscribe((data)=>{
       this.pokemonMoves = data;
-      console.log(this.pokemonMoves);
+      this.getSpecies(id);
+    })
+  }
+
+  getSpecies(id:number){
+    this.pokemonService.getPokemonSpecies(id).subscribe(data=>{
+      this.pokemonSpecies = data
+      console.log(this.pokemonSpecies);
     })
   }
 
