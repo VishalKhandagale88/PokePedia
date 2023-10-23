@@ -10,7 +10,7 @@ pagination
 
 
 pokemon data
-![Alt Text](https://github.com/VishalKhandagale88/PokePedia/blob/main/PokePedia/Screenshot%202023-10-22%20072158.png)
+![Alt Text](https://github.com/VishalKhandagale88/PokePedia/blob/main/PokePedia/pokemonIf-pokemonname.png)
 
 
 pokemon abilities tab
